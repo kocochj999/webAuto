@@ -2,6 +2,9 @@ package pages;
 
 import java.util.List;
 
+import io.github.bonigarcia.wdm.DriverManagerType;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.jsoup.Connection;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -26,6 +29,7 @@ public class BasePage {
 	}
 	public void waitElementClickable(WebDriver driver, WebElement e) {
 		explicitwait = new WebDriverWait(driver, timeOut);
+		explicitwait.until(ExpectedConditions.visibilityOf(e));
 		explicitwait.until(ExpectedConditions.elementToBeClickable(e));
 	}
 	

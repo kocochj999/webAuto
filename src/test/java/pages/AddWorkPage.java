@@ -12,7 +12,7 @@ public class AddWorkPage extends BasePage {
 	@FindBy(xpath = "//input[@id='select-image-single']")
 	WebElement uploadBtn;
 	
-	@FindBy(xpath = "//span[text()='Upload new work']")
+	@FindBy(xpath = "//div[@class='single-upload with-uploader']")
 	WebElement uploadBtn2;
 
 	public AddWorkPage(WebDriver driver) {
